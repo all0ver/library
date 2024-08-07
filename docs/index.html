@@ -6,10 +6,10 @@
         <title>Library</title>
         <link rel="stylesheet" href="output.css" />
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
-        body {
-            font-family: "Noto Sans Mono", monospace;
-        }
+            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+            body {
+                font-family: "Noto Sans Mono", monospace;
+            }
         </style>
     </head>
     <body>
@@ -19,18 +19,43 @@
         <input type="checkbox" name="read" id="read">
         <button id="addBtn">Add book</button>
         <button id="all">Show all books</button> -->
-        
-        <div class="min-h-screen">
+
+        <div class="min-h-screen flex flex-col">
             <div id="topbar" class="flex justify-between w-full p-4">
                 <h1>Library</h1>
                 <div class="flex-1 flex gap-4 justify-center">
-                    <input type="text" name="search" id="search" class="rounded border border-black h-10 p-2 basis-2/5">
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        class="rounded border border-black h-10 p-2 basis-2/5"
+                    />
                     <button class="px-4">?</button>
                 </div>
-                <div id="account" class="h-12 w-12 flex justify-center place-items-center bg-blue-300">i</div>
+                <div
+                    id="account"
+                    class="h-12 w-12 flex justify-center place-items-center bg-blue-300"
+                >
+                    i
+                </div>
             </div>
-            <div id="main" class="">
-            
+            <div id="main" class="flex flex-wrap p-20">
+                <div
+                    class="element border-2 rounded p-6 flex flex-col border-black justify-center h-52"
+                >
+                    <h2 class="font-bold pb-3 text-xl">The Hobbit</h2>
+                    <p>
+                        <span class="font-semibold">Author:</span> J.R.R.
+                        Tolkien
+                    </p>
+                    <p><span class="font-semibold">Pages:</span> 295</p>
+                    <p><span class="font-semibold">Status:</span> not</p>
+                    <button
+                        class="place-self-end bg-red-300 flex justify-center items-center w-10 h-10"
+                    >
+                        U
+                    </button>
+                </div>
             </div>
         </div>
         <script src="index.js"></script>
