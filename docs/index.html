@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Library</title>
         <link rel="stylesheet" href="output.css" />
+        <link rel="stylesheet" href="custom.css" />
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
             body {
@@ -39,7 +40,10 @@
                     i
                 </div>
             </div>
-            <div id="main" class="flex flex-wrap gap-4 p-20">
+            <div
+                id="main"
+                class="grid custom-grid gap-4 p-20 place-items-center"
+            >
                 <div
                     class="element border-2 rounded p-6 flex flex-col border-black justify-center h-60 w-72"
                 >
@@ -53,25 +57,7 @@
                     <p><span class="font-semibold">Pages:</span> 295</p>
                     <p><span class="font-semibold">Status:</span> not</p>
                     <button
-                        class="place-self-end bg-red-300 flex justify-center items-center w-10 h-10"
-                    >
-                        D
-                    </button>
-                </div>
-                <div
-                    class="element border-2 rounded p-6 flex flex-col border-black justify-center h-60 w-72"
-                >
-                    <h2 class="font-bold pb-3 text-xl text-wrap basis-1/4">
-                        The Lord of the Rings
-                    </h2>
-                    <p>
-                        <span class="font-semibold">Author:</span> J.R.R.
-                        Tolkien
-                    </p>
-                    <p><span class="font-semibold">Pages:</span> 295</p>
-                    <p><span class="font-semibold">Status:</span> not</p>
-                    <button
-                        class="place-self-end bg-red-300 flex justify-center items-center w-10 h-10"
+                        class="custom-button place-self-end bg-red-300 flex justify-center items-center w-10 h-10"
                     >
                         D
                     </button>
