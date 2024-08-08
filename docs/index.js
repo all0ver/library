@@ -59,6 +59,11 @@ function addElement(sTitle, sAuthor, sPages, sRead) {
   const divButton = document.createElement("button");
   const buttonClasses = ['custom-button','place-self-end', 'bg-red-300', 'flex', 'justify-center', 'items-center', 'w-10', 'h-10'];
   addManyClasses(divButton, buttonClasses);
+  divButton.addEventListener('click', () => {
+    console.log("eoeo");
+    //TODO:
+    //div deleting + you have to delete from the array on top
+  })
   const divChildren = [divTitle, divAuthor, divPages, divStatus, divButton];
   
   // adding text to elements
@@ -72,6 +77,8 @@ function addElement(sTitle, sAuthor, sPages, sRead) {
   });
 
   main.appendChild(div);
+  
+  
 }
 
 function addManyClasses(tag, list) {
@@ -110,3 +117,4 @@ addElement("text", "autor 123", "300", "not");
 // test
 // const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'not');
 // console.log(theHobbit.info());
+
