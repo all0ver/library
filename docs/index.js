@@ -95,7 +95,7 @@ function addElement(sTitle, sAuthor, sPages, sRead) {
     if (index > -1) {
       myLibrary.splice(index, 1);
     }
-    divButton.parentNode.parentNode.remove();
+    div.remove();
   });
   readButton.addEventListener("click", () => {
     if (div.children[3].textContent == "Status: read") {
