@@ -1,4 +1,3 @@
-
 const addBtn = document.querySelector("#addBtn");
 const allBtn = document.querySelector("#all");
 
@@ -168,7 +167,10 @@ addBtn.addEventListener("click", () => {
     readValue = "not read";
   }
   addElement(title, author, pages, readValue);
-  console.log(myLibrary);
   const form = document.querySelector("#addForm");
+  function handleForm(event) {
+    event.preventDefault();
+  }
+  form.addEventListener("submit", handleForm);
   form.reset();
 });
