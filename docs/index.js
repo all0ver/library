@@ -3,10 +3,6 @@ const allBtn = document.querySelector("#all");
 
 const myLibrary = [];
 
-myLibrary.forEach((book) => {
-  addElement(book.title, book.author, book.pages, book.read);
-});
-
 // const titles = myLibrary.map(Book => Book.title);
 
 function listAll() {
@@ -78,7 +74,6 @@ function addElement(sTitle, sAuthor, sPages, sRead) {
     if (index > -1) {
       myLibrary.splice(index, 1);
     }
-    console.log(myLibrary);
     divButton.parentNode.remove();
   });
   const divChildren = [divTitle, divAuthor, divPages, divStatus, divButton];
@@ -104,15 +99,6 @@ function addManyClasses(tag, list) {
   });
 }
 
-// addBtn.addEventListener("click", () => {
-//   const title = document.querySelector("#title").value;
-//   const author = document.querySelector("#author").value;
-//   const pages = document.querySelector("#pages").value;
-//   const read = document.querySelector("#read").checked;
-//   addElement(title, author, pages, read);
-// });
-// allBtn.addEventListener("click", listAll);
-//
 addElement("The Hobbit", "J.R.R. Tolkien", 310, "not read");
 addElement("1984", "George Orwell", 328, "read");
 addElement("Test Book", "Author Test", 123, "read");
@@ -129,4 +115,36 @@ addElement(
   223,
   "read",
 );
-console.log(myLibrary);
+
+const addMenu = document.querySelector("#addMenu");
+const addBookBtn = document.querySelector("#addBookBtn");
+const main = document.querySelector("#main");
+const addP = document.querySelector("#addP");
+addBookBtn.addEventListener("click", () => {
+  addMenu.classList.toggle("hidden");
+  addMenu.classList.toggle("flex");
+  main.classList.toggle("blur");
+  addP.classList.toggle("rotate-45");
+});
+
+addBtn.addEventListener("click", () => {
+  addMenu.classList.toggle("hidden");
+  addMenu.classList.toggle("flex");
+  main.classList.toggle("blur");
+  addP.classList.toggle("rotate-45");
+
+  let title = document.querySelector("#title").value;
+  let author = document.querySelector("#author").value;
+  let pages = document.querySelector("#pages").value;
+  let read = document.querySelector("#read").checked;
+  let readValue;
+  if (read == true) {
+    readValue = "read";
+  } else {
+    readValue = "not read";
+  }
+  addElement(title, author, pages, readValue);
+  console.log(myLibrary);
+  const form = document.querySelector("#addForm");
+  form.reset();
+});

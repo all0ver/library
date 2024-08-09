@@ -14,35 +14,80 @@
         </style>
     </head>
     <body>
-        <!-- <input type="text" name="title" id="title">
-        <input type="text" name="author" id="author">
-        <input type="number" name="pages" id="pages">
-        <input type="checkbox" name="read" id="read">
-        <button id="addBtn">Add book</button>
-        <button id="all">Show all books</button> -->
+        <div
+            id="addMenu"
+            class="hidden flex-col gap-4 justify-center items-center absolute w-screen h-[calc(100vh-4rem)] mt-16 z-50"
+        >
+            <form action="#" id="addForm">
+                <div class="flex flex-col items-start justify-center gap-4">
+                    <p class="text-xl font-bold">Add book info:</p>
+                    <input
+                        type="text"
+                        placeholder="Title"
+                        name="title"
+                        id="title"
+                        class="border border-black p-2 rounded"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Author"
+                        name="author"
+                        id="author"
+                        class="border border-black p-2 rounded"
+                    />
+                    <input
+                        type="number"
+                        placeholder="Pages"
+                        name="pages"
+                        id="pages"
+                        class="border border-black p-2 rounded"
+                    />
+                    <div class="flex gap-4 items-center">
+                        <input
+                            type="checkbox"
+                            name="read"
+                            id="read"
+                            class="w-4 h-4 inline"
+                        /><span>Read</span>
+                    </div>
+                    <button
+                        type="submit"
+                        id="addBtn"
+                        class="rounded bg-blue-500 py-2 px-4 w-full"
+                    >
+                        Add book
+                    </button>
+                    <!-- <button id="all">Show all books</button> -->
+                </div>
+            </form>
+        </div>
 
         <div class="min-h-screen flex flex-col">
-            <div id="topbar" class="flex justify-between w-full p-4">
-                <h1>Library</h1>
-                <div class="flex-1 flex gap-4 justify-center">
+            <div
+                id="topbar"
+                class="flex justify-between w-full p-4 h-16 items-center"
+            >
+                <h1 class="max-[500px]:hidden">Library</h1>
+                <div class="flex-1 flex gap-4 justify-center max-[500px]:gap-0">
                     <input
                         type="text"
                         name="search"
                         id="search"
                         class="rounded border border-black h-10 p-2 basis-2/5"
+                        placeholder="Enter title..."
                     />
                     <button class="px-4">?</button>
                 </div>
                 <button
-                    id="account"
-                    class="h-12 w-12 flex justify-center place-items-center bg-blue-300 font-xl text-3xl"
+                    id="addBookBtn"
+                    class="h-12 w-12 flex justify-center place-items-center bg-blue-300 font-xl text-4xl"
                 >
-                    +
+                    <p id="addP">+</p>
                 </button>
             </div>
             <div
                 id="main"
-                class="grid custom-grid gap-4 p-20 place-items-center"
+                class="grid custom-grid gap-4 p-20 place-items-center max-[500px]:px-0"
             >
                 <!-- <div
                     class="element border-2 rounded p-6 flex flex-col border-black justify-center h-60 w-72"
@@ -57,7 +102,7 @@
                     <p><span class="font-semibold">Pages:</span> 295</p>
                     <p><span class="font-semibold">Status:</span> not</p>
                     <button
-                        class="custom-button place-self-end bg-red-300 flex justify-center items-center w-10 h-10"
+                        class="custom-button place-self-end  flex justify-center items-center w-10 h-10 bg-red-300"
                     >
                         D
                     </button>
