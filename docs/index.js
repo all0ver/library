@@ -174,3 +174,20 @@ addBtn.addEventListener("click", () => {
   form.addEventListener("submit", handleForm);
   form.reset();
 });
+
+// searching
+
+const search = document.querySelector("#search");
+search.addEventListener("input", () => {
+  const searched = search.value;
+  const divs = document.querySelectorAll(".element");
+  divs.forEach((card) => {
+    if (card.firstChild.textContent.toLowerCase().includes(searched)) {
+      card.classList.add("flex");
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+      card.classList.remove("flex");
+    }
+  });
+});
